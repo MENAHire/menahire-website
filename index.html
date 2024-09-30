@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MENAHire</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="img/logo-2" />
+    <!-- Favicons -->
+    <link href="img/favicon-m-removebg-preview.png" rel="icon" />
+    <!-- <link href="img/apple-touch-icon.png" rel="apple-touch-icon" /> -->
+    <script
+      src="https://kit.fontawesome.com/f5e59cd45b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      const words = ["Request a Quote", "Contact Us"]; // Words to switch between
+      let currentWordIndex = 0;
+
+      function switchWords() {
+        const displays = document.querySelectorAll(".wordDisplay");
+        displays.forEach((display) => {
+          display.style.opacity = 0; // Fade out the word
+
+          // Change the word after the fade-out transition is done
+          setTimeout(() => {
+            display.textContent = words[currentWordIndex];
+            display.style.opacity = 1; // Fade in the new word
+            if (display.id !== "non-bold") {
+              display.style.fontWeight = "bold";
+            } else {
+              display.style.fontWeight = "normal";
+            }
+          }, 400); // Matches the transition time set in CSS
+        });
+
+        // Update index for the next cycle
+        currentWordIndex = (currentWordIndex + 1) % words.length;
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const displays = document.querySelectorAll(".wordDisplay");
+        displays.forEach((display) => {
+          display.textContent = words[0]; // Initialize with the first word
+          display.style.opacity = 1; // Ensure it's visible at start
+          if (display.id !== "non-bold") {
+            display.style.fontWeight = "bold";
+          } else {
+            display.style.fontWeight = "normal";
+          }
+        });
+        setInterval(switchWords, 5000); // Switch words every 10 seconds
+      });
+    </script>
+  </head>
+
+  <body>
+    <!--==========================
+  Header
+  ============================-->
+    <header id="header" class="fixed-top">
+      <div class="container">
+        <div class="logo float-left">
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+          <a href="#intro" class="scrollto"
+            ><img
+              src="img/logo.png"
+              alt=""
+              class="img-fluid"
+              style="transform: scale(1.3)"
+          /></a>
+        </div>
+
+        <nav class="main-nav float-right d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="#intro">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-us">Technology Stack</a></li>
+            <li><a href="#portfolio">Our Work</a></li>
+            <li><a href="#team">Team</a></li>
+            <li class="quote-box">
+              <a href="#contact" class="quote-link" style="color: white"
+                ><b class="wordDisplay"></b
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- #header -->
+
+    <!--==========================
+    Intro Section
+  ============================-->
+    <section id="intro" class="clearfix">
+      <div class="container">
+        <div class="intro-img">
+          <img src="img/intro-img.svg" alt="" class="img-fluid" />
+        </div>
+
+        <div class="intro-info">
+          <h2>
+            Empowering Your Business with<br /><span>World-Class Talent</span><br />
+          </h2>
+          <div>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a href="#services" class="btn-services scrollto">Our Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #intro -->
+
+    <main id="main">
+      <!--==========================
+      About Us Section
+    ============================-->
+      <section id="about">
+        <div class="container">
+          <header class="section-header">
+            <h3>About Us - MENAHire</h3>
+            <p>
+              👋 Hello and welcome to MENAHire, your one-stop shop for
+              cutting-edge software solutions that drive results. With a focus
+              on innovation, agility, and commitment to customer satisfaction,
+              we specialize in delivering tailor-made software products that
+              streamline your operations and elevate your business.
+            </p>
+            <p></p>
+          </header>
+
+          <div class="row about-container">
+            <div class="col-lg-6 content order-lg-1 order-2">
+              <p>
+                A dynamic duo fueled by passion and precision, MENAHire is
+                where innovation and expertise converge. Co-founded by two tech
+                enthusiasts, we specialize in custom web, app, and AI solutions.
+                No templates, no shortcuts — just bespoke digital craftsmanship
+                tailored to your unique vision. Dive into a partnership with us,
+                and let's co-create tech marvels that truly resonate. Welcome to
+                the future, tailored by MENAHire.
+              </p>
+
+              <div class="icon-box wow fadeInUp">
+                <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+                <h4 class="title"><a href="">Custom Craftsmanship</a></h4>
+                <p class="description">
+                  At MENAHire, we don't believe in one-size-fits-all. Our
+                  approach is rooted in understanding your distinct vision and
+                  goals, crafting digital experiences that are as unique as your
+                  business
+                </p>
+              </div>
+
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                <div class="icon"><i class="fa fa-photo"></i></div>
+                <h4 class="title"><a href="">Quality over Quantity</a></h4>
+                <p class="description">
+                  With us, you won't find cookie-cutter templates or quick
+                  fixes. We offer meticulously tailored solutions forged with a
+                  commitment to excellence
+                </p>
+              </div>
+
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                <div class="icon"><i class="fa fa-bar-chart"></i></div>
+                <h4 class="title"><a href="">Collaborative Spirit</a></h4>
+                <p class="description">
+                  We value partnership and open dialogue. As we journey together
+                  in creating your tech marvel, your voice and vision remain
+                  central to our process
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
+              <img src="img/about-img.svg" class="img-fluid" alt="" />
+            </div>
+          </div>
+
+          <!-- <div class="row about-extra">
+            <div class="col-lg-6 wow fadeInUp">
+              <img src="img/about-extra-1.svg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+              <h4>
+                Navigating MENAHire - Your Gateway to Digital Transformation
+              </h4>
+              <p>
+                Explore Our Web Ecosystem<br />
+                <br />Navigating through MENAHire's website isn't just about
+                clicking links; it's a journey through the gamut of digital
+                possibilities we offer. Explore our website more to know about
+                our services and check our portfolio and testemonials.
+              </p>
+            </div>
+          </div> -->
+
+          <!-- <div class="row about-extra">
+            <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+              <img src="img/about-extra-2.svg" class="img-fluid" alt="" />
+            </div>
+
+            <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+              <h4>
+                User-Centric Design - Bridging Functionality and Aesthetics
+              </h4>
+              <p>
+                At MENAHire, user experience is not an afterthought—it's a
+                defining pillar of our digital presence. Our website is
+                meticulously designed to offer both aesthetic appeal and
+                effortless navigation. With a streamlined interface, mobile
+                optimization, interactive elements, and top-notch security
+                measures, we ensure that every interaction you have with us
+                online is engaging, informative, and secure. From rapid page
+                loading to intuitive menus, our focus is on making your journey
+                through our digital landscape as seamless and rewarding as
+                possible.
+              </p>
+            </div>
+          </div> -->
+
+          <!-- <div class="row about-extra">
+            <div class="col-lg-6 wow fadeInUp">
+              <img src="img/about-extra-1.svg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+              <h4>
+                Navigating MENAHire - Your Gateway to Digital Transformation
+              </h4>
+              <p>
+                Explore Our Web Ecosystem<br />
+                <br />Navigating through MENAHire's website isn't just about
+                clicking links; it's a journey through the gamut of digital
+                possibilities we offer. Explore our website more to know about
+                our services and check our portfolio and testemonials.
+              </p>
+            </div>
+          </div> -->
+          <br>
+          <div class="stats-container">
+            <div class="stat-item">
+                <i class="fa fa-users icon"></i> <!-- Updated icon -->
+                <div class="stat-info">
+                    <span class="stat-number">10</span>
+                    <span class="stat-description">Satisfied Clients</span> <!-- Updated text -->
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fa fa-briefcase icon"></i> <!-- Updated icon -->
+                <div class="stat-info">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-description">Projects Completed</span> <!-- Updated text -->
+                </div>
+            </div>
+            <div class="stat-item">
+                <i class="fa fa-clock icon"></i> <!-- Updated icon -->
+                <div class="stat-info">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-description">Hours Dedicated</span> <!-- Updated text -->
+                </div>
+            </div>
+            <div class="stat-item">
+              <i class="fa fa-headset icon"></i>
+              <div class="stat-info">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-description">Support Offered</span> <!-- Updated text -->
+                </div>
+            </div>
+        </div>
+                        
+        </div>
+      </section>
+      <!-- #about -->
+
+      <!--==========================
+      Services Section
+    ============================-->
+      <section id="services" class="section-bg">
+        <div class="container">
+          <header class="section-header">
+            <h3>Services</h3>
+            <p>In short, we are turning Digital Dreams into Reality! ✨</p>
+            <p>
+              At MENAHire, we don't just deliver solutions; we sculpt
+              digital legacies. Let us partner with you in crafting your next
+              technological masterpiece.
+            </p>
+          </header>
+
+          <div class="row">
+            <div
+              class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon">
+                  <i class="fas fa-desktop" style="color: #ff689b"></i>
+                </div>
+                <h4 class="title"><a href="">Web Development</a></h4>
+                <p class="description">
+                  Create an impactful digital presence with our meticulously
+                  engineered websites, merging captivating design and robust
+                  functionality.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-5 wow bounceInUp"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon">
+                  <i class="fas fa-mobile" style="color: #d6ff22"></i>
+                </div>
+                <h4 class="title"><a href="">Mobile Solutions</a></h4>
+                <p class="description">
+                  Strengthen your mobile footprint using our avant-garde
+                  applications, blending pioneering technology and user-focused
+                  design.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp"
+              data-wow-delay="0.1s"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon">
+                  <i class="fas fa-book fa-lg" style="color: #3fcdc7"></i>
+                </div>
+                <h4 class="title"><a href="">Design Services</a></h4>
+                <p class="description">
+                  Benefit from designs that prioritize both aesthetic excellence
+                  and user engagement, making every interaction distinct and
+                  efficient.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-5 wow bounceInUp"
+              data-wow-delay="0.1s"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon">
+                  <i class="fas fa-suitcase" style="color: #4680ff"> </i>
+                </div>
+                <h4 class="title"><a href="">Technical Consulting</a></h4>
+                <p class="description">
+                  Chart your digital journey confidently with our expert
+                  guidance, ensuring your business strategies align with
+                  technological innovation.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp"
+              data-wow-delay="0.1s"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon">
+                  <i
+                    class="fas fa-chart-simple fa-lg"
+                    style="color: #3fcdc7"
+                  ></i>
+                </div>
+                <h4 class="title"><a href="">Data Analytics</a></h4>
+                <p class="description">
+                  Unlock actionable insights from your data with our analytics,
+                  driving data-led decisions for growth and efficiency.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-5 wow bounceInUp"
+              data-wow-delay="0.1s"
+              data-wow-duration="1.4s"
+            >
+              <div class="box">
+                <div class="icon">
+                  <i class="fas fa-cloud" style="color: #4680ff"> </i>
+                </div>
+                <h4 class="title"><a href="">DevOps & Cloud Solutions</a></h4>
+                <p class="description">
+                  Enhance your operations with our cloud solutions. Whether
+                  migrating or building afresh, we promise seamless, secure, and
+                  optimized performance.
+                </p>
+              </div>
+            </div>
+
+            <!-- <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-world-outline" style="color: #d6ff22;"></i></div>
+              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon"><i class="ion-ios-clock-outline" style="color: #4680ff;"></i></div>
+              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            </div>
+          </div>
+ -->
+          </div>
+        </div>
+      </section>
+      <!-- #services -->
+
+      <!--==========================
+      Why Us Section
+    ============================-->
+      <section id="why-us" class="wow fadeIn">
+        <div class="container">
+          <header class="section-header">
+            <h3>The Technology</h3>
+            <p>
+              At MENAHire, we harness the power of modern technologies to
+              bring your visions to life. Our technology stack is carefully
+              chosen to ensure performance, scalability, and security. Here's a
+              glimpse of what we work with:
+            </p>
+          </header>
+
+          <div class="row row-eq-height justify-content-center">
+            <div class="col-lg-4 mb-4">
+              <div class="card wow bounceInUp">
+                <i class="fa fa-desktop"></i>
+                <div class="card-body">
+                  <h5 class="card-title">Front-end</h5>
+                  <p class="card-text">
+                    <strong style="color: azure">React</strong><br />
+                    <strong style="color: azure">Angular</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card wow bounceInUp">
+                <i class="fa fa-server"></i>
+                <div class="card-body">
+                  <h5 class="card-title">Back-end</h5>
+                  <p class="card-text">
+                    <strong style="color: azure">Node.js - Express.js</strong
+                    ><br />
+                    <strong style="color: azure">Nest.js</strong><br />
+                    <strong style="color: azure">Spring Boot</strong><br />
+                    <strong style="color: azure">Fast API</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card wow bounceInUp">
+                <i class="fa fa-mobile"></i>
+                <div class="card-body">
+                  <h5 class="card-title">Mobile App</h5>
+                  <p class="card-text">
+                    <strong style="color: azure">Flutter</strong><br />
+                    <strong style="color: azure">React Native</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-eq-height justify-content-center">
+            <div class="col-lg-4 mb-4">
+              <div class="card wow bounceInUp">
+                <i class="fa fa-database"></i>
+                <div class="card-body">
+                  <h5 class="card-title">Databases</h5>
+                  <p class="card-text">
+                    <strong style="color: azure">PostgreSQL</strong><br />
+                    <strong style="color: azure">MongoDB</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card wow bounceInUp">
+                <i class="fa fa-cloud"></i>
+                <div class="card-body">
+                  <h5 class="card-title">DevOps & Cloud</h5>
+                  <p class="card-text">
+                    <strong style="color: azure">Docker</strong><br />
+                    <strong style="color: azure">Jenkins</strong><br />
+                    <strong style="color: azure">AWS & Azure </strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="card wow bounceInUp">
+                <i class="fa fa-code-branch"></i>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Collaboration & <br />
+                    Version Control
+                  </h5>
+                  <p class="card-text">
+                    <strong style="color: azure">Git & Github</strong><br />
+                    <strong style="color: azure">Slack & Trello</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row counters">
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">274</span>
+              <p>Clients</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">421</span>
+              <p>Projects</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">1,364</span>
+              <p>Hours Of Support</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">18</span>
+              <p>Hard Workers</p>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!--==========================
+      Portfolio Section
+    ============================-->
+      <section id="portfolio" class="clearfix">
+        <div class="container">
+          <header class="section-header">
+            <h3 class="section-title">Our Work</h3>
+          </header>
+
+
+          <div class="row portfolio-container">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="img/portfolio/app1.jpg" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4><a href="#">App 1</a></h4>
+                  <p>App</p>
+                  <div>
+                    <a
+                      href="img/portfolio/app1.jpg"
+                      data-lightbox="portfolio"
+                      data-title="App 1"
+                      class="link-preview"
+                      title="Preview"
+                      ><i class="ion ion-eye"></i
+                    ></a>
+                    <a href="#" class="link-details" title="More Details"
+                      ><i class="ion ion-android-open"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-web"
+              data-wow-delay="0.1s"
+            >
+              <div class="portfolio-wrap">
+                <img src="img/portfolio/web3.jpg" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4><a href="#">Web 3</a></h4>
+                  <p>Web</p>
+                  <div>
+                    <a
+                      href="img/portfolio/web3.jpg"
+                      class="link-preview"
+                      data-lightbox="portfolio"
+                      data-title="Web 3"
+                      title="Preview"
+                      ><i class="ion ion-eye"></i
+                    ></a>
+                    <a href="#" class="link-details" title="More Details"
+                      ><i class="ion ion-android-open"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-app"
+              data-wow-delay="0.2s"
+            >
+              <div class="portfolio-wrap">
+                <img src="img/portfolio/app2.jpg" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4><a href="#">App 2</a></h4>
+                  <p>App</p>
+                  <div>
+                    <a
+                      href="img/portfolio/app2.jpg"
+                      class="link-preview"
+                      data-lightbox="portfolio"
+                      data-title="App 2"
+                      title="Preview"
+                      ><i class="ion ion-eye"></i
+                    ></a>
+                    <a href="#" class="link-details" title="More Details"
+                      ><i class="ion ion-android-open"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                <img src="img/portfolio/card2.jpg" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4><a href="#">Card 2</a></h4>
+                  <p>Card</p>
+                  <div>
+                    <a
+                      href="img/portfolio/card2.jpg"
+                      class="link-preview"
+                      data-lightbox="portfolio"
+                      data-title="Card 2"
+                      title="Preview"
+                      ><i class="ion ion-eye"></i
+                    ></a>
+                    <a href="#" class="link-details" title="More Details"
+                      ><i class="ion ion-android-open"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-web"
+              data-wow-delay="0.1s"
+            >
+              <div class="portfolio-wrap">
+                <img src="img/portfolio/web2.jpg" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4><a href="#">Web 2</a></h4>
+                  <p>Web</p>
+                  <div>
+                    <a
+                      href="img/portfolio/web2.jpg"
+                      class="link-preview"
+                      data-lightbox="portfolio"
+                      data-title="Web 2"
+                      title="Preview"
+                      ><i class="ion ion-eye"></i
+                    ></a>
+                    <a href="#" class="link-details" title="More Details"
+                      ><i class="ion ion-android-open"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-app"
+              data-wow-delay="0.2s"
+            >
+              <div class="portfolio-wrap">
+                <img src="img/portfolio/app3.jpg" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4><a href="#">App 3</a></h4>
+                  <p>App</p>
+                  <div>
+                    <a
+                      href="img/portfolio/app3.jpg"
+                      class="link-preview"
+                      data-lightbox="portfolio"
+                      data-title="App 3"
+                      title="Preview"
+                      ><i class="ion ion-eye"></i
+                    ></a>
+                    <a href="#" class="link-details" title="More Details"
+                      ><i class="ion ion-android-open"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                <img src="img/portfolio/card1.jpg" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4><a href="#">Card 1</a></h4>
+                  <p>Card</p>
+                  <div>
+                    <a
+                      href="img/portfolio/card1.jpg"
+                      class="link-preview"
+                      data-lightbox="portfolio"
+                      data-title="Card 1"
+                      title="Preview"
+                      ><i class="ion ion-eye"></i
+                    ></a>
+                    <a href="#" class="link-details" title="More Details"
+                      ><i class="ion ion-android-open"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-card"
+              data-wow-delay="0.1s"
+            >
+              <div class="portfolio-wrap">
+                <img src="img/portfolio/card3.jpg" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4><a href="#">Card 3</a></h4>
+                  <p>Card</p>
+                  <div>
+                    <a
+                      href="img/portfolio/card3.jpg"
+                      class="link-preview"
+                      data-lightbox="portfolio"
+                      data-title="Card 3"
+                      title="Preview"
+                      ><i class="ion ion-eye"></i
+                    ></a>
+                    <a href="#" class="link-details" title="More Details"
+                      ><i class="ion ion-android-open"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 portfolio-item filter-web"
+              data-wow-delay="0.2s"
+            >
+              <div class="portfolio-wrap">
+                <img src="img/portfolio/web1.jpg" class="img-fluid" alt="" />
+                <div class="portfolio-info">
+                  <h4><a href="#">Web 1</a></h4>
+                  <p>Web</p>
+                  <div>
+                    <a
+                      href="img/portfolio/web1.jpg"
+                      class="link-preview"
+                      data-lightbox="portfolio"
+                      data-title="Web 1"
+                      title="Preview"
+                      ><i class="ion ion-eye"></i
+                    ></a>
+                    <a href="#" class="link-details" title="More Details"
+                      ><i class="ion ion-android-open"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+      <!-- #portfolio -->
+
+      <!--==========================
+      Clients Section
+    ============================-->
+      <section id="testimonials" class="section-bg">
+        <div class="container">
+          <header class="section-header">
+            <h3>Testimonials</h3>
+          </header>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="owl-carousel testimonials-carousel wow fadeInUp">
+                <div class="testimonial-item">
+                  <img
+                    src="img/testimonials/ivar.jpeg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>IVARGRAND</h3>
+                  <h4>Oil E-Commerce</h4>
+                  <p>
+                    We've collaborated with many software companies before, but
+                    none have matched the innovative spirit and expertise that
+                    MENAHire brings to the table. Their digital solutions
+                    have skyrocketed our online sales. They're not just vendors;
+                    they are our strategic partners.
+                  </p>
+                </div>
+                <div class="testimonial-item">
+                  <img
+                    src="img/testimonials/med.jpeg"
+                    class="testimonial-img"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                  <h3>S-Medical Center</h3>
+                  <h4>Medical</h4>
+                  <p>
+                    Working with MENAHire was a game-changer for us. Their
+                    software solutions have dramatically increased the
+                    efficiency of our patient management system, allowing us to
+                    focus more on patient care rather than administrative work.
+                    Truly the heartbeat behind our technological advancement.
+                  </p>
+                </div>
+
+                <div class="testimonial-item">
+                  <img
+                    src="img/testimonials/phone.jpeg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>AK Phone</h3>
+                  <h4>Mobile Phones Store</h4>
+                  <p>
+                    In a fast-paced industry, MENAHire has been our rock.
+                    They've provided agile and robust software solutions that
+                    helped us keep up with rapidly evolving consumer demands.
+                    Their team is responsive, skilled, and incredibly easy to
+                    work with. Five stars!
+                  </p>
+                </div>
+
+                <div class="testimonial-item">
+                  <img
+                    src="img/testimonials/law.jpeg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Rahmeh Law Firm</h3>
+                  <h4>Law</h4>
+                  <p>
+                    Law is all about attention to detail, and MENAHire's
+                    software solutions reflect that perfectly. Their document
+                    management system has revolutionized how we handle our case
+                    files, making our work more streamlined than ever before. We
+                    couldn't be more satisfied.
+                  </p>
+                </div>
+
+                <div class="testimonial-item">
+                  <img
+                    src="img/testimonials/books.jpeg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>EduPass</h3>
+                  <h4>Educational NGO</h4>
+                  <p>
+                    MENAHire's educational software is nothing short of
+                    revolutionary. It has empowered our educators with tools
+                    that are easy to use yet incredibly effective. The impact on
+                    student engagement and learning has been remarkable. They've
+                    set a new standard for educational technology.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- #testimonials -->
+
+      <!--==========================
+      Team Section
+    ============================-->
+      <section id="team">
+        <div class="container">
+          <div class="section-header">
+            <h3><br />Team</h3>
+            <p>Meet Our Dedicated Team:</p>
+          </div>
+
+          <div class="row justify-content-around">
+            <div class="col-lg-4 col-md-6 wow fadeInUp">
+              <div class="member">
+                <img
+                  src="img/melhem.PNG"
+                  class="img-fluid images-circle"
+                  alt="Melhem Rahmeh"
+                />
+                <div class="member-info">
+                  <h4>Melhem Rahmeh</h4>
+                  <span>Founder & CEO</span>
+                  <div class="social">
+                    <a href="mailto:melhem.rahmeh@outlook.com"
+                      ><i class="fa fa-envelope-o"></i
+                    ></a>
+                    <a href="https://www.linkedin.com/in/melhem-rahmeh/"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="member">
+                <img
+                  src="img/ayla.jpg"
+                  class="img-fluid images-circle"
+                  alt="Adam Sleiman"
+                />
+                <div class="member-info">
+                  <h4>Adam Sleiman</h4>
+                  <span>Co-Founder</span>
+                  <div class="social">
+                    <a href="mailto:aylahmadi2016@gmail.com"
+                      ><i class="fa fa-envelope-o"></i
+                    ></a>
+                    <a href="https://www.linkedin.com/in/ayla-hmadi-58971023b/"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="member">
+                <img
+                  src="img/ayla.jpg"
+                  class="img-fluid images-circle"
+                  alt="Ayla Hmadi"
+                />
+                <div class="member-info">
+                  <h4>Ayla Hmadi</h4>
+                  <span>Co-Founder</span>
+                  <div class="social">
+                    <a href="mailto:aylahmadi2016@gmail.com"
+                      ><i class="fa fa-envelope-o"></i
+                    ></a>
+                    <a href="https://www.linkedin.com/in/ayla-hmadi-58971023b/"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+          </div>
+        </div>
+      </section>
+      <!-- #team -->
+
+      <!--==========================
+      Clients Section
+    ============================-->
+      <!-- <section id="clients" class="section-bg">
+        <div class="container">
+          <div class="section-header">
+            <h3>Our CLients</h3>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque dere santome nida.
+            </p>
+          </div>
+
+          <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="img/clients/client-1.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="img/clients/client-2.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="img/clients/client-3.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="img/clients/client-4.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="img/clients/client-5.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="img/clients/client-6.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="img/clients/client-7.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="img/clients/client-8.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!--==========================
+      Contact Section
+    ============================-->
+      <section id="contact">
+        <div class="container-fluid">
+          <div class="section-header">
+            <h3><b class="wordDisplay"></b></h3>
+          </div>
+
+          <div class="row wow fadeInUp">
+            <div class="col-lg-6">
+              <div class="map mb-4 mb-lg-0">
+                <!-- <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!Beirut+Digital+District!5e0!3m2!1smk!2sbg!4v1539943755621"
+                  frameborder="0"
+                  style="border: 0; width: 100%; height: 312px"
+                  allowfullscreen
+                ></iframe> -->
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.7796652374645!2d35.5608346!3d33.895328000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f17001318fead%3A0x9fb7a5d77ccd094d!2sMENAHire!5e0!3m2!1sen!2slb!4v1717602175403!5m2!1sen!2slb"
+                  frameborder="0"
+                  style="border: 0; width: 100%; height: 312px"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-md-4 info">
+                  <i class="ion-ios-location-outline"></i>
+                  <p>Baouchriyeh</p>
+                </div>
+                <div class="col-md-4 info">
+                  <i class="ion-ios-email-outline"></i>
+                  <p>MENAHire.lb@gmail.com</p>
+                </div>
+                <div class="col-md-4 info">
+                  <i class="ion-ios-telephone-outline"></i>
+                  <p>+961 71 589 832</p>
+                </div>
+              </div>
+
+              <div class="form">
+                <div id="sendmessage">
+                  Your message has been sent. Thank you!
+                </div>
+                <div id="errormessage"></div>
+                <form action="" method="post" role="form" class="contactForm">
+                  <div class="form-row">
+                    <div class="form-group col-lg-6">
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        id="name"
+                        placeholder="Your Name"
+                        data-rule="minlen:4"
+                        data-msg="Please enter at least 4 chars"
+                      />
+                      <div class="validation"></div>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        placeholder="Your Email"
+                        data-rule="email"
+                        data-msg="Please enter a valid email"
+                      />
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      id="subject"
+                      placeholder="Subject"
+                      data-rule="minlen:4"
+                      data-msg="Please enter at least 8 chars of subject"
+                    />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="5"
+                      data-rule="required"
+                      data-msg="Please write something for us"
+                      placeholder="Message"
+                    ></textarea>
+                    <div class="validation"></div>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" title="Send Message">
+                      <b>Send Message</b>
+                    </button>
+                  </div>
+                </form>
+                <div
+                  class="toast success-toast"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                  data-delay="4000"
+                  style="
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 9999;
+                  "
+                >
+                  <div class="toast-header">
+                    <strong class="mr-auto">Notification</strong>
+                    <button
+                      type="button"
+                      class="ml-2 mb-1 close"
+                      data-dismiss="toast"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="toast-body">
+                    <!-- Toast message will be inserted here -->
+                  </div>
+                </div>
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const contactForm = document.querySelector(".contactForm");
+
+                    contactForm.addEventListener("submit", function (e) {
+                      e.preventDefault(); // Prevent default form submission
+
+                      const formData = {
+                        service_id: "service_h6ialz4",
+                        template_id: "template_6c4cjcf",
+                        user_id: "vuVUOt_q8agHdR6wi",
+                        template_params: {
+                          username: document.getElementById("name").value,
+                          email: document.getElementById("email").value,
+                          subject: document.getElementById("subject").value,
+                          message: document.querySelector(
+                            'textarea[name="message"]'
+                          ).value,
+                        },
+                      };
+
+                      sendData(formData);
+                    });
+                  });
+
+                  function sendData(data) {
+                    fetch("https://api.emailjs.com/api/v1.0/email/send", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(data),
+                    })
+                      .then((response) => {
+                        if (!response.ok) {
+                          return response.text().then((text) => {
+                            throw new Error(
+                              text || "Network response was not ok"
+                            );
+                          });
+                        }
+                        return response.text(); // Handle non-JSON responses
+                      })
+                      .then((data) => {
+                        const toastElem = document.querySelector(".toast");
+                        const toastBody =
+                          toastElem.querySelector(".toast-body");
+
+                        if (data) {
+                          toastBody.textContent =
+                            "Email sent successfully: " + data;
+                        } else {
+                          toastBody.textContent = "Email sent successfully!";
+                        }
+
+                        // Display the toast
+                        $(toastElem).toast("show");
+                      })
+
+                      .catch((error) => {
+                        alert("Error sending email: " + error.message);
+                      });
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- #contact -->
+    </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 footer-info">
+              <h3>MENAHire</h3>
+              <p>
+                👋 Hello and welcome to MENAHire, your one-stop shop for
+                cutting-edge software solutions that drive results. With a focus
+                on innovation, agility, and commitment to customer satisfaction,
+                we specialize in delivering tailor-made software products that
+                streamline your operations and elevate your business.
+              </p>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Our Work</a></li>
+                <li><a href="#team">Team</a></li>
+                <li>
+                  <a href="#contact" class="wordDisplay" id="non-bold"
+                    >Request a quote</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h4 class="wordDisplay">Request a quote</h4>
+              <p>
+                <strong>Melhem Rahmeh</strong> <br />
+                <strong>Phone:</strong> +961 71 589 832 <br />
+
+                <strong>Email:</strong> melhem.rahmeh@outlook.com<br />
+                <br />
+                <br />
+                <!-- <strong>Ayla Hmadi</strong> <br />
+                <strong>Phone:</strong> +961 81 088 604 <br />
+
+                <strong>Email:</strong> aylahmadi2016@gmail.com<br /> -->
+                <br />
+                <br />
+              </p>
+
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="instagram"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <a href="#" class="google-plus"
+                  ><i class="fa fa-google-plus"></i
+                ></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-newsletter">
+              <h4>Our Newsletter</h4>
+              <p>
+                Dive into the latest advancements in software solutions with our
+                monthly newsletter. From the newest trends to innovative
+                insights, we bring a digest of all that's happening in the tech
+                sphere, straight to your inbox. Stay updated, stay ahead. Join
+                our community today!
+              </p>
+              <form action="" method="post">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="youremail@mail.com"
+                /><input type="submit" value="Subscribe" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- #footer -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- Uncomment below i you want to use a preloader -->
+    <!-- <div id="preloader"></div> -->
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/mobile-nav/mobile-nav.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
